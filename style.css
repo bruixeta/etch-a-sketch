@@ -1,12 +1,20 @@
 .row{
+    margin: 0px;
+    padding: 0;
     background-color: aqua;
-    height: 100px;
+    height: 6vw;
     display: flex;
-    gap: 8px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
 }
 
 .column {
     background-color: brown;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    flex: 1; 
+    aspect-ratio: 1/1;
+    max-width: 5vw; /* Adjust this value as needed */
+    max-height: 5vw;
 }
