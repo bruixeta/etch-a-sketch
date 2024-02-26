@@ -20,10 +20,30 @@ function createGrid(rowsNum, columnsNum){
 });
 }
 
-
 function mouseOver(event){
     let square = event.target;
     square.style.backgroundColor = 'blue';
+}
+
+const button = document.querySelector('button');
+button.addEventListener('click', clickNewGrid);
+
+function clickNewGrid(event){
+    let button = event.target;
+    let gridSize = prompt("Grid's size?");
+    if(gridSize <1){
+        alert("Please, insert a positive number");
+    }
+    else if(gridSize < 101){
+        const squares = Array.from(document.getElementsByClassName('column'));
+        squares.forEach((square) => {
+        square.remove();
+});
+        createGrid(gridSize,gridSize);
+    }
+    else{
+        alert("The maximum size allowed is 100. Please, introduce a smaller number.")
+    }
 }
 
 
