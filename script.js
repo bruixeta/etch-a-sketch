@@ -7,6 +7,7 @@ function createGrid(rowsNum, columnsNum){
         for(let j=0; j<columnsNum; j++){
             const newColumn  = document.createElement('div');
             newColumn.className = 'column';
+            newColumn.style.setProperty('--num-interactions', 0);
             newRow.style.setProperty('--num-columns', columnsNum);
             newRow.appendChild(newColumn);
         }
@@ -22,8 +23,23 @@ function createGrid(rowsNum, columnsNum){
 
 function mouseOver(event){
     let square = event.target;
-    square.style.backgroundColor = getRandomRGB();
+
+    let numInteractions = parseInt(square.style.getPropertyValue('--num-interactions'));
+    numInteractions++; 
+    square.style.setProperty('--num-interactions', numInteractions); // Update the custom property
+    
+    let r = getRandomInteger(0, 255);
+    let g = getRandomInteger(0, 255);
+    let b = getRandomInteger(0, 255);
+
+    r = Math.max(0, Math.min(255, Math.floor(r * (1 - 0.1 * numInteractions))));
+    g = Math.max(0, Math.min(255, Math.floor(g * (1 - 0.1 * numInteractions))));
+    b = Math.max(0, Math.min(255, Math.floor(b * (1 - 0.1 * numInteractions))));
+   
+
+    square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
+
 
 const button = document.querySelector('button');
 button.addEventListener('click', clickNewGrid);
@@ -49,11 +65,5 @@ function clickNewGrid(event){
 function getRandomInteger(start, end) {
     return start + Math.floor(Math.random() * (end - start + 1))
  }
-
-function getRandomRGB() {
-    return `rgb(${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)})`;
- }
-
-
 
 

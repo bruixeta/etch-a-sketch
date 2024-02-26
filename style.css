@@ -1,3 +1,15 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    background-color: #3d1e2f;
+    color: #F9FAF8;
+  }
+
 .row{
     margin: 0px;
     padding: 0px;
@@ -8,11 +20,43 @@
 }
 
 .column {
-    background-color: rgb(223, 214, 214);
+    background-color: white;
     flex: 1; 
     aspect-ratio: 1/1;
     padding: 0;
     margin: 0;
     max-width: calc(100% / var(--num-columns));
     max-height: calc(100% / var(--num-columns));
+}
+
+.button{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#grid-container{
+    border: 1px solid black;
+}
+
+button {
+    font-size: 32px;
+    padding: 10px 20px;
+    background-color: #ffe100eb;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+h1 {
+    margin: 30px 75px 10px ;
+    text-align: center;
+
+}
+
+p {
+    margin: 30px 75px 10px ;
+    text-align: justify;
 }
