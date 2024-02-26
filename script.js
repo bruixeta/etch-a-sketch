@@ -7,6 +7,7 @@ function createGrid(rowsNum, columnsNum){
         for(let j=0; j<columnsNum; j++){
             const newColumn  = document.createElement('div');
             newColumn.className = 'column';
+            newRow.style.setProperty('--num-columns', columnsNum);
             newRow.appendChild(newColumn);
         }
         gridContainer.appendChild(newRow);

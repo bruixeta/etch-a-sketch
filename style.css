@@ -1,20 +1,18 @@
 .row{
     margin: 0px;
-    padding: 0;
+    padding: 0px;
     background-color: aqua;
-    height: 6vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 4px;
+    gap: 0px;
 }
 
 .column {
     background-color: brown;
-    height: 100px;
-    width: 100px;
     flex: 1; 
     aspect-ratio: 1/1;
-    max-width: 5vw; /* Adjust this value as needed */
-    max-height: 5vw;
+    padding: 0;
+    margin: 0;
+    max-width: calc(100% / var(--num-columns));
+    max-height: calc(100% / var(--num-columns));
 }
