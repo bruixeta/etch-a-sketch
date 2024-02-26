@@ -1,0 +1,12 @@
+.row{
+    background-color: aqua;
+    height: 100px;
+    display: flex;
+    gap: 8px;
+}
+
+.column {
+    background-color: brown;
+    height: 50px;
+    width: 50px;
+}

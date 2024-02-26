@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <title>Etch a Sketch</title>
   <script src="script.js" defer></script> 
-  <script src="https://kit.fontawesome.com/2257cdb0d3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="grid-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            createGrid(16, 16);
+        });
+    </script>
   
 </body>
 </html>
