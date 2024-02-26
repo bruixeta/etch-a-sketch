@@ -1,14 +1,14 @@
 .row{
     margin: 0px;
     padding: 0px;
-    background-color: aqua;
+    background-color: white;
     display: flex;
     align-items: center;
     gap: 0px;
 }
 
 .column {
-    background-color: brown;
+    background-color: rgb(223, 214, 214);
     flex: 1; 
     aspect-ratio: 1/1;
     padding: 0;

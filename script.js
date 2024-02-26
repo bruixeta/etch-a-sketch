@@ -12,6 +12,20 @@ function createGrid(rowsNum, columnsNum){
         }
         gridContainer.appendChild(newRow);
     }
+
+    const squares = Array.from(document.getElementsByClassName('column'));
+
+    squares.forEach((square) => {
+    square.addEventListener('mouseover', mouseOver);
+});
 }
+
+
+function mouseOver(event){
+    let square = event.target;
+    square.style.backgroundColor = 'blue';
+}
+
+
 
 
