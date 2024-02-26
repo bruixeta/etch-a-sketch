@@ -22,7 +22,7 @@ function createGrid(rowsNum, columnsNum){
 
 function mouseOver(event){
     let square = event.target;
-    square.style.backgroundColor = 'blue';
+    square.style.backgroundColor = getRandomRGB();
 }
 
 const button = document.querySelector('button');
@@ -45,6 +45,14 @@ function clickNewGrid(event){
         alert("The maximum size allowed is 100. Please, introduce a smaller number.")
     }
 }
+
+function getRandomInteger(start, end) {
+    return start + Math.floor(Math.random() * (end - start + 1))
+ }
+
+function getRandomRGB() {
+    return `rgb(${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)})`;
+ }
 
 
 
